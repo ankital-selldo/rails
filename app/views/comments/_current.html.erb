@@ -1,0 +1,7 @@
+<h2> Partial view to get comments of current article </h2>
+
+
+<% @article.comments.each do |comment| %>
+  <p> <%= comment.commenter %> </p>
+  <p> Body of comment : <%= comment.body %> </p>
+<% end %>

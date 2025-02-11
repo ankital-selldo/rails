@@ -23,10 +23,18 @@ class ArticlesController < ActionController::Base
   end
 
   def create #Create new article i.e. POST Operation
-    article = Article.create(article_params)
-    puts "#{params}\n"
+    @article = Article.new(article_params)
+    puts "Inside create"
 
-    redirect_to articles_path   # Redirects to index.html.rb
+    puts "#{@article.title}"
+    puts "#{@article.description}"
+
+
+    if @article.save
+      redirect_to article_path(@article) #show.html.erb
+    else
+      render :new
+    end  # Redirects to index.html.rb
   end
 
   def destroy # it will find the article and delete it i.e. DELETE operation
@@ -38,6 +46,6 @@ class ArticlesController < ActionController::Base
 
   private
   def article_params #The .permit method is used to specify which attributes of the "article" parameters are allowed to be updated.
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :description)
   end
 end
