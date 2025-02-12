@@ -1,0 +1,54 @@
+/* CSS for new.html.erb */
+.authors-container {
+  padding: 20px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px; /* Space below */
+}
+
+h3 {
+  color: #333; /* Darker heading color */
+  margin-bottom: 15px;
+  text-align: center; /* Center the heading */
+}
+
+.author-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.author-item {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.author-item a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underlines */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.author-item a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+.new-author-button {
+  text-align: center; /* Center the button */
+}
+
+.create-button {
+  background-color: #007bff; /* Blue button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.create-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

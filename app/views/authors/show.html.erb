@@ -1,0 +1,25 @@
+<h1>Author Details</h1>
+
+<div class="author-details-container">
+  <div class="author-info">
+    <p><strong>Name:</strong> <%= @author.name %></p>
+    <p><strong>Nickname:</strong> <%= @author.nickname %></p>
+    <p><strong>Date of Birth:</strong> <%= @author.dateofbirth %></p>
+  </div>
+
+  <div class="author-avatar">
+    <p><strong>Avatar:</strong></p>
+    <% if @author.avatar.present? %>
+      <%= image_tag @author.avatar.url, class: "avatar-image" %>
+    <% else %>
+      <p>No avatar uploaded</p>
+    <% end %>
+  </div>
+</div>
+
+<div class="author-details-container">
+  </div>
+
+<div class="author-actions">  <%= link_to "Update Author", edit_author_path(@author), class: "update-button" %>
+  <%= button_to "Delete Author", author_path(@author), method: :delete, data: { confirm: "Are you sure?" }, class: "delete-button" %>
+</div>

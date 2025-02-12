@@ -1,0 +1,17 @@
+<div class="authors-container">
+  <h3> All authors </h3>
+
+  <ul class="author-list">
+    <% @author.each do |auth| %>
+      <li class="author-item">
+        <%= link_to auth.name, author_path(auth) %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="new-author-button">
+    <%= form_with url: "/authors/new", method: :get do |form| %>
+      <%= form.button "CREATE NEW Author", class: "create-button" %> 
+    <% end %>
+  </div>
+</div>

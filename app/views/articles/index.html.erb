@@ -5,3 +5,31 @@
     <li> <%= link_to article.title, article_path(article) %> </li>
     <% end %>
 </ul>
+
+<br>
+<br>
+<br>
+<br>
+
+<%= render "form", article: @article1 %>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<%= form_with url: "/articles/new", method: :get do |form| %>
+<%= form.select :city,
+      {
+        "Europe" => [ ["Berlin", "BE"], ["Madrid", "MD"] ],
+        "North America" => [ ["Chicago", "CHI"] ],
+        "ABC" => [ ["Berlin", "BE"], ["Madrid", "MD"] ],
+        " America" => [ ["Chicago", "CHI"] ],
+      },
+      selected: "CHI" %>
+
+
+  <%= form.button "CREATE NEW ARTICLE" %> 
+<% end %>
+

@@ -1,0 +1,101 @@
+/* CSS for show.html.erb */
+.author-details-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: flex-start; /* Align items to the top */
+  padding: 20px;
+  border: 1px solid #eee; /* Add a border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #f9f9f9; /* Light background color */
+  margin-bottom: 20px; /* Space below the container */
+}
+
+.author-info {
+  flex: 1; /* Take up available space */
+  margin-right: 20px; /* Space between info and avatar */
+}
+
+.author-info p {
+    margin-bottom: 10px; /* Space between paragraph */
+}
+
+.author-avatar {
+  text-align: center; /* Center the avatar */
+}
+
+.avatar-image {
+  max-width: 200px; /* Limit image width */
+  height: auto; /* Maintain aspect ratio */
+  /* border-radius: 50%;  Remove for square/rectangle */
+  border: 3px solid #fff; /* White border */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow on avatar */
+}
+
+h1 {
+  color: #333; /* Darker heading color */
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+p {
+  color: #555; /* Slightly darker text color */
+  line-height: 1.6; /* Improved line height */
+}
+
+strong {
+  font-weight: bold;
+  color: #333; /* Darker color for labels */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+  .author-details-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+  }
+
+  .author-info {
+    margin-right: 0;
+    margin-bottom: 20px; /* Space below info on smaller screens */
+    text-align: center;
+  }
+}
+
+/* show.css (or your stylesheet) */
+/* ... (Existing CSS) ... */
+
+.author-actions {
+  margin-top: 20px; /* Space above the buttons */
+  text-align: center; /* Center the buttons horizontally */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+}
+
+.update-button, .delete-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin: 0 10px; /* Space between buttons */
+}
+
+.update-button {
+  background-color: #ADD8E6; /* Light Blue */
+  color: #333; /* Darker text for contrast on light blue */
+  text-decoration: none;
+}
+
+.update-button:hover {
+  background-color: #87CEEB; /* Slightly darker light blue on hover */
+}
+
+.delete-button {
+  background-color: #ADD8E6; /* Light Blue */
+  color: #333; /* Darker text for contrast */
+}
+
+.delete-button:hover {
+  background-color: #87CEEB; /* Slightly darker light blue on hover */
+}

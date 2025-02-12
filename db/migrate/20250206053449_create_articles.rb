@@ -3,8 +3,7 @@ class CreateArticles < ActiveRecord::Migration[8.0]
     create_table :articles do |t|
       t.string :title
       t.string :description
-
-
+    
       t.timestamps
     end
   end

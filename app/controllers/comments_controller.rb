@@ -3,8 +3,8 @@ class CommentsController < ApplicationController
   def index
     @article = Article.find(params[:article_id])
     @comment = @article.comments
+    @comment_count = count_comments
   end
-
 
   def show 
     @article = Article.find(params[:article_id])
@@ -22,8 +22,9 @@ class CommentsController < ApplicationController
     end
 
 
-    def count_comments(article)
-      total = article.comments.count
+    def count_comments
+      @article = Article.find(params[:article_id])
+      total = @article.comments.count
       total 
     end
 end

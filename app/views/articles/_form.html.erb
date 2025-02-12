@@ -1,0 +1,38 @@
+<h1>form with fields_for demo</h1>
+
+
+<%= form_with model: @article1 do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <br>
+  <%= form.label :birth_date %>
+  <%= form.date_select :birth_date %>
+
+
+  <br> 
+
+  <%= form.label :description %>
+  <%= form.text_field :description %>
+
+  <br>
+
+  <%= form.label :category %>
+
+  <%= form.select :category,
+      {
+        "Technology" => [ ["Abc", "A"], ["Xyz", "X"] ],
+        "Science" => [ ["Lmn", "L"] ],
+        "Business" => [ ["Jyk", "J"], ["Olk", "O"] ],
+        "Hollywood" => [ ["Cho", "C"] ],
+      },
+      selected: "C" %>
+
+  <br>
+
+  <%= form.label :image %>
+  <%= form.file_field :image %>
+
+  <br>
+  <%= form.submit %>
+<% end %> 

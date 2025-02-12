@@ -1,10 +1,11 @@
 class ArticlesController < ActionController::Base
   def index #it will list all the article
     @article = Article.all
+    @article1 = Article.new
   end
 
   def show #it will show all the articles with corresponding to it's id
-    @article = Article.find(params[:id])
+    @article1 = Article.find(params[:id])
   end
 
   def new  #instantiating article so that POST operation can be done
@@ -33,7 +34,7 @@ class ArticlesController < ActionController::Base
     if @article.save
       redirect_to article_path(@article) #show.html.erb
     else
-      render :new
+      render "new"
     end  # Redirects to index.html.rb
   end
 

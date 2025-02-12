@@ -4,4 +4,6 @@ class Article < ApplicationRecord
   validates :description, presence: true, length: {minimum: 5, message: "Length of %{value} must be greater than 5"}
 
   has_many :comments
+
+  has_one_attached :image
 end
